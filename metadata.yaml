@@ -1,0 +1,20 @@
+name: apache-bigtop-gateway
+summary: Apache Bigtop gateway component
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+description: >
+  Hadoop is a software platform that lets one easily write and
+  run applications that process vast amounts of data.
+
+  This charm provides a connection point for client / workload
+  services via the Apache Bigtop gateway.
+tags: ["applications", "bigdata", "hadoop", "apache"]
+#subordinate: true
+requires:
+  hadoop-plugin:
+    interface: hadoop-plugin
+    scope: container
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+

@@ -1,0 +1,9 @@
+repo: git@github.com:juju-solutions/layer-apache-bigtop-gateway.git
+includes:
+  - 'layer:apache-bigtop-base'
+#  - 'layer:hadoop-ganglia'
+  - 'interface:dfs'
+  - 'interface:mapred'
+options:
+  apache-bigtop-base:
+    bigtop_component_list: 'gateway'
